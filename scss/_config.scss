@@ -1,0 +1,42 @@
+$show-home-image: true;
+$home-image: url("/dist/images/backg.jpg");
+
+@mixin background {
+  @if $show-home-image {
+    div {
+      &.content {
+        background: $home-image;
+        background-size: cover;
+        background-color: #535c68;
+        background-blend-mode: overlay;
+        height: 100vh;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//Media Query mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

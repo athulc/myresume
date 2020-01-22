@@ -1,0 +1,196 @@
+//Wide Screens
+@include mediaXl {
+  nav {
+    .burger {
+      display: none;
+    }
+  }
+}
+
+//Desktops & Laptops
+@include mediaLg {
+  .menu-nav {
+    width: 60%;
+  }
+}
+
+//Tablets & Small laptops
+@include mediaMd {
+  nav {
+    .burger {
+      display: block;
+    }
+    .menu-nav {
+      opacity: 0;
+    }
+  }
+
+  .about {
+    h4 {
+      text-align: center;
+      margin-left: 0%;
+    }
+
+    .about-info {
+      grid-template-areas:
+        "bioimage"
+        "bio";
+      grid-template-columns: 1fr;
+
+      p {
+        text-align: center;
+        padding: 20px;
+        font-size: 1.3rem;
+      }
+    }
+
+    .certificates {
+      gap: 1rem 5rem;
+      grid-template-columns: 1fr;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .skills {
+    .skill-sets {
+      grid-template-areas:
+        "skillset1"
+        "skillset2";
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .work {
+    h4 {
+      text-align: center;
+      margin-left: 0%;
+    }
+
+    .projects {
+      gap: 1rem 0.5rem;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .education {
+    padding: 10px;
+
+    h4 {
+      text-align: center;
+      margin-left: 0%;
+    }
+
+    .edu-body {
+      position: relative;
+      background-color: lighten(#2f363f, 10);
+      margin: 0px 90px;
+      border-radius: 0 8px 8px 0;
+      padding: 5px 0;
+
+      &:after {
+        content: "";
+        width: 4px;
+        height: 100%;
+        background-color: aliceblue;
+        position: absolute;
+        left: -4px;
+        top: 0;
+      }
+
+      .edu-item {
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 4px solid aliceblue;
+          background-color: #2f363f;
+          position: absolute;
+          left: -16px;
+          top: 0;
+          z-index: 9;
+        }
+
+        .time {
+          position: absolute;
+          left: -95px;
+          top: 4px;
+          opacity: 0.5;
+          font-size: 14px;
+        }
+
+        .desc {
+          margin: 20px;
+
+          padding-bottom: 30px;
+          border-bottom: #2f363f dashed 2px;
+
+          .title {
+            font-weight: 400;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    h4 {
+      text-align: center;
+      margin-left: 0%;
+    }
+    .contact-div {
+      flex-direction: column;
+
+      .contact-block {
+        h2,
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+//Mobile phones
+@include mediaSm {
+  body {
+    width: 100%;
+  }
+  nav {
+    .burger {
+      display: block;
+    }
+    .menu-nav {
+      opacity: 0;
+    }
+  }
+
+  h1,
+  h3 {
+    &.lg-heading {
+      font-size: 4rem;
+      font-weight: 400;
+    }
+
+    &.sm-heading {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  .skills {
+    .skill-sets {
+      grid-template-areas:
+        "skillset1"
+        "skillset2";
+      //gap: 1px 1px;
+      grid-template-columns: 1fr;
+    }
+  }
+}

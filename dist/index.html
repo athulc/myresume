@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/5c4ca0e844.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>My Resume</title>
+  </head>
+  <body>
+    <div class="all">
+      <div class="content">
+        <nav id="navbar">
+          <div class="logo">
+            <h2>My Resume</h2>
+          </div>
+          <ul class="menu-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#part1">About</a></li>
+            <li><a href="#part2">Skills</a></li>
+            <li><a href="#part3">Works</a></li>
+            <li><a href="#part4">Edu</a></li>
+            <li><a href="#part5">Contact</a></li>
+          </ul>
+          <div class="burger" onclick="myFunction(this)">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+        <div id="top-menu" class="top-nav">
+          <a href="#">Home</a>
+          <a href="#part1">About</a>
+          <a href="#part2">Skills</a>
+          <a href="#part3">Works</a>
+          <a href="#part4">Edu</a>
+          <a href="#part5">Contact</a>
+        </div>
+        <div class="nav-details">
+          <h1 class="lg-heading">Athul C</h1>
+          <h3 class="sm-heading">Full Stack Developer</h3>
+          <div class="icons">
+            <a href="https://en-gb.facebook.com/athul.rao.39">
+              <i class="fab fa-facebook fa-3x"></i>
+            </a>
+            <a href="https://www.instagram.com/athurao/?hl=en">
+              <i class="fab fa-instagram fa-3x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/athul-c-52546a163">
+              <i class="fab fa-linkedin fa-3x"></i>
+            </a>
+            <a href="https://github.com/athulc/">
+              <i class="fab fa-github fa-3x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="about" id="part1">
+        <h4>About Me</h4>
+        <div class="about-info">
+          <img
+            src="/images/profilepic.jpg"
+            alt="Profile Pic"
+            class="bio-image"
+          />
+          <p class="bio">
+            To seek challenging and responsible position in an organization
+            through my sincerity and hard work which would help my growth both
+            on the intellectual and personal front, meanwhile contributing to
+            the growth and success of the organization.
+          </p>
+        </div>
+        <div class="certificates">
+          <div>
+            <h3>Certificate</h3>
+            <p>
+              I have completed the course on
+              <b>“Complete Backend development with NodeJS”</b> from
+              LearnCodeOnline.in
+            </p>
+            <p>
+              To check certificate
+              <a
+                href="https://courses.learncodeonline.in/learn/certificate/433398-23129"
+                >Click Here</a
+              >
+            </p>
+          </div>
+          <div>
+            <h3>Internship</h3>
+            <p>
+              I have pursued 6 months internship in JDA Software Pvt Ltd
+              Bangalore.
+            </p>
+          </div>
+          <div>
+            <h3>Paper Presentation</h3>
+            <p>
+              Presented paper in the international conference called as
+              SACAIM-2018 conducted by Department of MCA/MSc, AIMIT Mangalore on
+              <strong>
+                “Real-time traffic management system in smart cities to overcome
+                traffic congestion.”
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="skills" id="part2">
+        <h4>Skills</h4>
+        <div class="skill-sets">
+          <div id="set1">
+            <li>
+              <h3>JavaScript</h3>
+              <span class="bar">
+                <span class="javascript"></span>
+              </span>
+            </li>
+            <li>
+              <h3>HTML5</h3>
+              <span class="bar">
+                <span class="html"></span>
+              </span>
+            </li>
+            <li>
+              <h3>CSS</h3>
+              <span class="bar">
+                <span class="css"></span>
+              </span>
+            </li>
+          </div>
+          <div id="set2">
+            <li>
+              <h3>React.js</h3>
+              <span class="bar">
+                <span class="react"></span>
+              </span>
+            </li>
+            <li>
+              <h3>Node.js</h3>
+              <span class="bar">
+                <span class="node"></span>
+              </span>
+            </li>
+            <li>
+              <h3>Python</h3>
+              <span class="bar">
+                <span class="python"></span>
+              </span>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="work" id="part3">
+        <h4>Projects</h4>
+        <div class="projects">
+          <div class="item">
+            <a href="#!"><img src="/images/project_1.png" alt="Project1"/></a>
+            <a href="https://dev-corner.herokuapp.com/" class="btn-dark"
+              ><i class="fas fa-eye"></i> Preview</a
+            >
+            <a href="https://github.com/athulc/MERN" class="btn-light"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </div>
+          <div class="item">
+            <a href="#!"><img src="/images/project_2.png" alt="Project2"/></a>
+            <a class="btn-dark disabled"><i class="fas fa-eye"></i> Preview</a>
+            <a
+              href="https://github.com/athulc/TvMonitorDisplay.git "
+              class="btn-light"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </div>
+          <div class="item">
+            <a href="#!"><img src="/images/project_3.png" alt="Project3"/></a>
+            <a href="#" class="btn-dark"><i class="fas fa-eye"></i> Preview</a>
+            <a href="#" class="btn-light"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="education" id="part4">
+        <h4>Education</h4>
+        <div class="edu-body">
+          <div class="edu-item">
+            <p class="time">2017-2019</p>
+            <div class="desc">
+              <h2 class="title">MSc (Software Technology)</h2>
+              <p>
+                St. Aloysius College(AUTONOMOUS) AIMIT, Beeri, Mangalore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="edu-body">
+          <div class="edu-item">
+            <p class="time">2014-2017</p>
+            <div class="desc">
+              <h2 class="title">BSc (ECsM)</h2>
+              <p>
+                St. Aloysius College (AUTONOMOUS), Mangalore
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact" id="part5">
+        <h4>Contact Me</h4>
+        <div class="contact-div">
+          <div class="contact-block">
+            <h2>I Would Like To Hear From You.</h2>
+            <br />
+            <hr />
+            <br />
+            <h2>Athul C</h2>
+            <p>Full Stack Developer</p>
+            <h2>Mobile</h2>
+            <p>+91 9207595679</p>
+            <h2>Email</h2>
+            <p>raoathul@gmail.com</p>
+          </div>
+          <div class="contact-block">
+            <h2>To know more about me click the following button.</h2>
+            <br />
+            <a href="/files/resume_2.pdf" class="btn-light">Check My Resume</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" id="topclass"><i class="fas fa-arrow-up"></i></a>
+      <footer class="main-footer">Copyright &copy; 2019</footer>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
