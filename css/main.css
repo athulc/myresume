@@ -1,0 +1,455 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue; }
+  body div.content {
+    background: url("/dist/images/backg.jpg");
+    background-size: cover;
+    background-color: #535c68;
+    background-blend-mode: overlay;
+    height: 100vh;
+    width: 100%; }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #2f363f;
+  border-bottom: solid 1px aliceblue;
+  opacity: 0.9;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.5s; }
+  nav .logo {
+    font-size: large;
+    font-weight: 300; }
+  nav .menu-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 40%; }
+    nav .menu-nav li {
+      list-style: none; }
+      nav .menu-nav li a {
+        text-decoration: none;
+        color: aliceblue; }
+  nav .burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: 0.3s; }
+  nav .change .line1 {
+    transform: rotate(-45deg) translate(-4px, 4px); }
+  nav .change .line2 {
+    opacity: 0; }
+  nav .change .line3 {
+    transform: rotate(45deg) translate(-7px, -8px); }
+  nav .burger {
+    display: none; }
+
+.top-nav {
+  height: 250px;
+  position: relative;
+  z-index: 9;
+  background-color: #111;
+  opacity: 0.9;
+  overflow: hidden;
+  display: none;
+  top: 10vh;
+  padding: 10px; }
+  .top-nav a {
+    text-align: center;
+    padding: 3px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: aliceblue;
+    display: block;
+    transition: 0.3s; }
+    .top-nav a:hover {
+      font-weight: 400; }
+
+.nav-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .nav-details .icons a {
+    padding: 10px;
+    color: aliceblue; }
+
+h1,
+h3 {
+  text-align: center;
+  color: aliceblue;
+  padding: 0; }
+  h1.lg-heading,
+  h3.lg-heading {
+    font-size: 5rem;
+    font-weight: 400; }
+  h1.sm-heading,
+  h3.sm-heading {
+    font-size: 3rem;
+    font-weight: 300; }
+
+.about {
+  border-top: solid 2px aliceblue;
+  background-color: #2f363f; }
+  .about h4 {
+    padding: 15px;
+    margin-left: 6%;
+    font-size: 4rem;
+    font-weight: 300; }
+  .about .about-info {
+    display: grid;
+    gap: 4px 4px;
+    grid-template-areas: "bioimage bio bio";
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 30px; }
+    .about .about-info .bio-image {
+      grid-area: bioimage;
+      border-radius: 50%;
+      border: 2px solid aliceblue;
+      margin: auto;
+      width: 200px;
+      height: 200px; }
+    .about .about-info .bio {
+      grid-area: bio; }
+    .about .about-info p {
+      color: aliceblue;
+      padding: 10px;
+      font-size: 1.5rem;
+      font-weight: 300; }
+  .about .certificates {
+    display: grid;
+    gap: 10px 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    border-bottom: aliceblue 2px solid; }
+    .about .certificates div {
+      padding: 15px;
+      background-color: #454f5c;
+      border-top: solid 4px aliceblue; }
+      .about .certificates div a {
+        color: aliceblue; }
+    .about .certificates p {
+      text-align: center;
+      font-size: large; }
+
+.skills {
+  background-color: #2f363f;
+  border-bottom: solid 2px aliceblue; }
+  .skills h4 {
+    padding: 15px;
+    margin-left: 6%;
+    font-size: 4rem;
+    font-weight: 300; }
+  .skills .skill-sets {
+    display: grid;
+    gap: 1rem 1rem;
+    grid-template-areas: "skillset1 skillset2";
+    grid-template-columns: repeat(2, 1fr); }
+    .skills .skill-sets #set1 {
+      grid-area: skillset1;
+      padding: 20px;
+      margin: 2rem 2rem;
+      background: #454f5c; }
+    .skills .skill-sets #set2 {
+      grid-area: skillset2;
+      padding: 20px;
+      margin: 2rem 2rem;
+      background: #454f5c; }
+    .skills .skill-sets li {
+      margin: 20px auto;
+      list-style: none; }
+      .skills .skill-sets li h3 {
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 20px; }
+      .skills .skill-sets li .bar {
+        background: #2f363f;
+        display: block;
+        height: 10px;
+        border: solid 1px rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 5px 5px 5px black; }
+        .skills .skill-sets li .bar span {
+          height: 10px;
+          float: left;
+          background: aliceblue;
+          border-radius: 2px; }
+        .skills .skill-sets li .bar .javascript {
+          width: 93%; }
+        .skills .skill-sets li .bar .html {
+          width: 90%; }
+        .skills .skill-sets li .bar .css {
+          width: 65%; }
+        .skills .skill-sets li .bar .react {
+          width: 63%; }
+        .skills .skill-sets li .bar .node {
+          width: 90%; }
+        .skills .skill-sets li .bar .python {
+          width: 55%; }
+
+.work {
+  background-color: #2f363f;
+  border-bottom: aliceblue 2px solid; }
+  .work h4 {
+    padding: 15px;
+    margin-left: 4%;
+    font-size: 4rem;
+    font-weight: 300; }
+  .work .projects {
+    display: grid;
+    gap: 0.5rem 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px; }
+    .work .projects img {
+      width: 100%;
+      border: 1px solid aliceblue; }
+    .work .projects a {
+      text-decoration: none; }
+      .work .projects a .disabled {
+        pointer-events: none;
+        cursor: default; }
+
+.education {
+  padding: 10px;
+  background-color: #2f363f;
+  border-bottom: 2px solid aliceblue; }
+  .education h4 {
+    padding: 15px;
+    margin-left: 4%;
+    font-size: 4rem;
+    font-weight: 300; }
+  .education .edu-body {
+    position: relative;
+    background-color: #454f5c;
+    margin: 0px 140px;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 0; }
+    .education .edu-body:after {
+      content: "";
+      width: 4px;
+      height: 100%;
+      background-color: aliceblue;
+      position: absolute;
+      left: -4px;
+      top: 0; }
+    .education .edu-body .edu-item {
+      position: relative; }
+      .education .edu-body .edu-item:after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 4px solid aliceblue;
+        background-color: #2f363f;
+        position: absolute;
+        left: -12px;
+        top: 0;
+        z-index: 9; }
+      .education .edu-body .edu-item .time {
+        position: absolute;
+        left: -95px;
+        top: 4px;
+        opacity: 0.5;
+        font-size: 14px; }
+      .education .edu-body .edu-item .desc {
+        margin: 20px;
+        padding-bottom: 30px;
+        border-bottom: #2f363f dashed 2px; }
+        .education .edu-body .edu-item .desc .title {
+          font-weight: 400;
+          margin-bottom: 10px; }
+
+.contact {
+  padding: 10px;
+  background-color: #2f363f; }
+  .contact h4 {
+    padding: 15px;
+    margin-left: 4%;
+    font-size: 4rem;
+    font-weight: 300; }
+  .contact .contact-div {
+    display: flex;
+    padding: 20px; }
+    .contact .contact-div .contact-block {
+      margin-right: 10px;
+      padding: 5px;
+      width: 100%; }
+      .contact .contact-div .contact-block hr {
+        background-color: whitesmoke; }
+      .contact .contact-div .contact-block div {
+        border: 1px solid aliceblue;
+        padding: 15px;
+        width: 100%; }
+      .contact .contact-div .contact-block a {
+        text-decoration: none; }
+
+#topclass {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 10px;
+  bottom: 55px;
+  opacity: 0.9;
+  background-color: #2f363f;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  padding: 3px;
+  color: aliceblue; }
+  #topclass:hover {
+    color: black; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 1px solid aliceblue;
+  text-align: center;
+  font-size: large; }
+
+.btn-dark {
+  background: #1a1a1a;
+  color: aliceblue;
+  font-size: large; }
+
+.btn-light {
+  background: aliceblue;
+  color: #000; }
+
+.main-footer {
+  background-color: #1a1a1a;
+  color: aliceblue;
+  padding: 15px;
+  text-align: center; }
+
+@media screen and (min-width: 1171px) {
+  nav .burger {
+    display: none; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .menu-nav {
+    width: 60%; } }
+
+@media screen and (max-width: 768px) {
+  nav .burger {
+    display: block; }
+  nav .menu-nav {
+    opacity: 0; }
+  .about h4 {
+    text-align: center;
+    margin-left: 0%; }
+  .about .about-info {
+    grid-template-areas: "bioimage" "bio";
+    grid-template-columns: 1fr; }
+    .about .about-info p {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.3rem; }
+  .about .certificates {
+    gap: 1rem 5rem;
+    grid-template-columns: 1fr; }
+    .about .certificates p {
+      text-align: center; }
+  .skills .skill-sets {
+    grid-template-areas: "skillset1" "skillset2";
+    grid-template-columns: 1fr; }
+  .work h4 {
+    text-align: center;
+    margin-left: 0%; }
+  .work .projects {
+    gap: 1rem 0.5rem;
+    grid-template-columns: 1fr; }
+  .education {
+    padding: 10px; }
+    .education h4 {
+      text-align: center;
+      margin-left: 0%; }
+    .education .edu-body {
+      position: relative;
+      background-color: #454f5c;
+      margin: 0px 90px;
+      border-radius: 0 8px 8px 0;
+      padding: 5px 0; }
+      .education .edu-body:after {
+        content: "";
+        width: 4px;
+        height: 100%;
+        background-color: aliceblue;
+        position: absolute;
+        left: -4px;
+        top: 0; }
+      .education .edu-body .edu-item {
+        position: relative; }
+        .education .edu-body .edu-item:after {
+          content: "";
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 4px solid aliceblue;
+          background-color: #2f363f;
+          position: absolute;
+          left: -16px;
+          top: 0;
+          z-index: 9; }
+        .education .edu-body .edu-item .time {
+          position: absolute;
+          left: -95px;
+          top: 4px;
+          opacity: 0.5;
+          font-size: 14px; }
+        .education .edu-body .edu-item .desc {
+          margin: 20px;
+          padding-bottom: 30px;
+          border-bottom: #2f363f dashed 2px; }
+          .education .edu-body .edu-item .desc .title {
+            font-weight: 400;
+            margin-bottom: 10px; }
+  .contact h4 {
+    text-align: center;
+    margin-left: 0%; }
+  .contact .contact-div {
+    flex-direction: column; }
+    .contact .contact-div .contact-block h2,
+    .contact .contact-div .contact-block p {
+      text-align: center; } }
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%; }
+  nav .burger {
+    display: block; }
+  nav .menu-nav {
+    opacity: 0; }
+  h1.lg-heading,
+  h3.lg-heading {
+    font-size: 4rem;
+    font-weight: 400; }
+  h1.sm-heading,
+  h3.sm-heading {
+    font-size: 2rem;
+    font-weight: 300; }
+  .skills .skill-sets {
+    grid-template-areas: "skillset1" "skillset2";
+    grid-template-columns: 1fr; } }
